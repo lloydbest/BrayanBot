@@ -229,7 +229,7 @@ module.exports = (settings, ephemeral = false, components = null) => {
                 // Fields
                 if (Fields && Fields.length) {
                     fields.forEach((field) => {
-                        embed.addField(field.name, field.value, field.inline);
+                        embed.addField(field.name, field.value, field.inline || true);
                     });
                 }
                 messageData.embeds.push(embed);
